@@ -1,0 +1,11 @@
+{
+  "name": "jawboneprint",
+  "description": "jawbone adventure printer",
+  "author": "Suz Hinton <susan@owlposse.com>",
+  "dependencies": {
+    "jawbone-up": "0.0.1"
+  },
+ "engines": {
+    "node": ">= 0.10.0"
+  }
+}
