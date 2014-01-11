@@ -11,4 +11,8 @@ var mee = up.me.get({}, function(dataaaa, resp) {
 
 var movez = up.moves.get({}, function(movedata, resp) {
   console.log(movedata, resp);
+  // itemLen = resp.data.items.length;
+  // for (var i = 0; i < itemLen; i++) {
+  //   console.log(resp.movedatadata.items[i] + "\n");
+  // }
 })
