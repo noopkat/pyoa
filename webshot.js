@@ -4,7 +4,7 @@ var webshot = require('webshot'),
 var options = {
   windowSize: {
     width: 384,
-    height: 480
+    height: '2000'
   },
   hotSize: {
     width: 384,
