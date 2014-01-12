@@ -6,12 +6,19 @@ var options = {
   , height: 480
   }
 , shotSize: {
-    width: 'window'
+    width: 384
   , height: 'all'
   }
 }
 
-
-webshot('http://purr.noopkat.com/', 'tmp/today.png', options, function(err) {
-  // screenshot now saved to google.png
+webshot('http://purr.noopkat.com/', 'py-printer/today.png', options, function(err) {
+  // exec the printer script
+  exec('python py-printer/test.py',
+  function (error, stdout, stderr) {
+    console.log('stdout: ' + stdout);
+    console.log('stderr: ' + stderr);
+    if (error !== null) {
+      console.log('exec error: ' + error);
+    }
+});
 });
