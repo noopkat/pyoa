@@ -1,5 +1,17 @@
 var webshot = require('webshot');
 
-webshot('http://purr.noopkat.com/', 'tmp/today.png', function(err) {
+var options = {
+  windowSize: {
+    width: 384
+  , height: 480
+  }
+, shotSize: {
+    width: 'window'
+  , height: 'all'
+  }
+}
+
+
+webshot('http://purr.noopkat.com/', 'tmp/today.png', options, function(err) {
   // screenshot now saved to google.png
 });
