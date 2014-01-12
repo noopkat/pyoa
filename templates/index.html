@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Print Your Own Adventure with Jawbone Up</title>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      font-family: 'Georgia';
+      font-size: 18px;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    #printimage {
+      width:384px;
+      max-width: 384px;
+      line-height: 1.em;
+    }
+    p {
+      width: 384px;
+      padding-bottom: 40px;
+      line-height: 1.8em;
+    }
+
+    #tagline {
+      padidng:0;
+      margin:0;
+      text-align: center;
+      line-height: 1em;
+    }
+    span {
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="printimage">
+    <img id="header" src="http://f.cl.ly/items/3A3B3d3w2l1G0S1S0D2r/header.jpg"/>
+    <p id="tagline"><i>with your Jawbone Up!</i></p>
+
+    <h2>{{lowhour}}:00 - quiet time</h2>
+    <img src="http://f.cl.ly/items/3B1p3p3W3H1z0u2O3b3W/low.jpg"/>
+    <p>Around {{lowhour}}:00, I see there wasn't a lot of activity from you. You did {{lowsteps}} steps. It's important to rest, so well done! I trust you were sitting on a lovely tree stump and a friendly dog trotted over to hang out with you!</p>
+
+    <h2>{{highhour}}:00 - fast paced!</h2>
+    <img src="http://f.cl.ly/items/3M0g0S2t1x2z113A2I1n/high.jpg"/>
+    <p>Around {{highhour}}:00, you were pretty active! In fact, you took {{highsteps}} steps! What were you doing, fending off a tiger that was chasing you in the supermarket? Pretty sweet adventure!</p>
+
+    <span><i>Wonder what you'll be up to tomorrow?</i></span><br/><br/>
+    <span>~ PYOA was made with love by @noopkat ~<span>
+  </div>
+</body>
+</html>

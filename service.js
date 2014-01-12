@@ -1,5 +1,19 @@
-var options = {
-  // ** REQUIRED **
+var http = require('http')
+  , util = require('util')
+  , stream = require('stream')
+  , mu   = require('mu2');
+
+mu.root = __dirname + '/templates';
+
+http.createServer(function (req, res) {
+
+  if (process.env.NODE_ENV == 'DEVELOPMENT') {
+    mu.clearCache();
+  }
+
+  var view = {};
+  var options = {
+  // jawbone up access token
   access_token:  'Je5CDuGC9ORcrdAxf3gA40QnKHlnMDyjGKNSPxdpEdkw4eX-yYDAVsY3UMdy4oJfrsusto4OhIz7HNtl_NYFMVECdgRlo_GULMgGZS0EumxrKbZFiOmnmAPChBPDZ5JP'
 }
 
@@ -41,5 +55,19 @@ var movez = up.moves.get({}, function(movedata, resp) {
   }
   // print largest and smallest
   console.log(smallest, largest);
+  view.lowsteps = smallest;
+  view.highsteps = largest;
+  view.lowhour = shour;
+  view.highhour = lhour;
+
+  console.log(view);
+   var stream = mu.compileAndRender('index.html', view);
+  util.pump(stream, res);
   
 });
+
+
+
+ 
+
+}).listen(8000);
