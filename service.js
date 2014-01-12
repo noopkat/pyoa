@@ -1,7 +1,7 @@
-var http = require('http')
-  , util = require('util')
-  , stream = require('stream')
-  , mu   = require('mu2');
+var http = require('http'),
+    util = require('util'),
+    stream = require('stream'),
+    mu   = require('mu2');
 
 mu.root = __dirname + '/templates';
 
@@ -65,9 +65,5 @@ var movez = up.moves.get({}, function(movedata, resp) {
   util.pump(stream, res);
   
 });
-
-
-
- 
 
 }).listen(8000);

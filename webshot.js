@@ -1,24 +1,30 @@
-var webshot = require('webshot');
+var webshot = require('webshot'),
+    child = require('child_process');
 
 var options = {
   windowSize: {
-    width: 384
-  , height: 480
-  }
-, shotSize: {
-    width: 384
-  , height: 'all'
-  }
+    width: 384,
+    height: 480
+  },
+  hotSize: {
+    width: 384,
+    height: 'all'
+  },
+  defaultWhiteBackground : true
 }
 
-webshot('http://purr.noopkat.com/', 'py-printer/today.png', options, function(err) {
+webshot('http://purr.noopkat.com/', 'py-print/today.png', options, function(err) {
   // exec the printer script
-  exec('python py-printer/test.py',
-  function (error, stdout, stderr) {
-    console.log('stdout: ' + stdout);
-    console.log('stderr: ' + stderr);
-    if (error !== null) {
-      console.log('exec error: ' + error);
-    }
+  runPrintScript();
 });
-});
+
+function runPrintScript() {
+  child.exec('python py-print/test.py',
+    function (error, stdout, stderr) {
+      console.log('stdout: ' + stdout);
+      console.log('stderr: ' + stderr);
+      if (error !== null) {
+        console.log('exec error: ' + error);
+      }
+  });
+}
