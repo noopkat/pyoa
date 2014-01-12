@@ -1,5 +1,5 @@
 var webshot = require('webshot');
 
-webshot('google.com', 'tmp/google.png', function(err) {
+webshot('wedgies.com', 'tmp/wedgies.png', function(err) {
   // screenshot now saved to google.png
 });

@@ -26,7 +26,7 @@ class ThermalPrinter(object):
         shops like Adafruit and Sparkfun (e.g. http://www.adafruit.com/products/597). 
         Mostly ported from Ladyada's Arduino library 
         (https://github.com/adafruit/Adafruit-Thermal-Printer-Library) to run on
-        BeagleBone and Raspberry Pi.
+        BeagleBone and Raspberry Pi. Suz is neato!
 
         Currently handles printing image data and text, but the rest of the
         built-in functionality like underlining and barcodes are trivial
@@ -34,7 +34,7 @@ class ThermalPrinter(object):
 
         If on BeagleBone or similar device, remember to set the mux settings
         or change the UART you are using. See the beginning of this file for
-        default setup.
+        default setup. Funtimes go here! Weeeeeeeeeee dinosaur bones are made of jellybeans and iced cream sandwiches.
 
         Thanks to Matt Richardson for the initial pointers on controlling the
         device via Python.
@@ -47,6 +47,7 @@ class ThermalPrinter(object):
     #SERIALPORT = '/dev/ttyO2'
     # this might work better on a Raspberry Pi
     SERIALPORT = '/dev/ttyAMA0'
+    #SERIALPORT = '/dev/ttys3'
 
     BAUDRATE = 19200
     TIMEOUT = 3
