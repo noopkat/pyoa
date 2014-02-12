@@ -19,7 +19,7 @@ webshot('http://purr.noopkat.com/', 'py-print/today.png', options, function(err)
 });
 
 function runPrintScript() {
-  child.exec('python py-print/test.py',
+  child.exec('python vendor/py-print/test.py',
     function (error, stdout, stderr) {
       console.log('stdout: ' + stdout);
       console.log('stderr: ' + stderr);
