@@ -1,6 +1,5 @@
 var options = {
-  // ** REQUIRED **
-  access_token:  'Je5CDuGC9ORcrdAxf3gA40QnKHlnMDyjGKNSPxdpEdkw4eX-yYDAVsY3UMdy4oJfrsusto4OhIz7HNtl_NYFMVECdgRlo_GULMgGZS0EumxrKbZFiOmnmAPChBPDZ5JP'
+  access_token:  ''
 }
 
 var up = require('jawbone-up')(options);
